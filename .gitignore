@@ -6,12 +6,18 @@
 
 # Ignore bundler config.
 /chapter3/.bundle
+/chapter4/.bundle
 
 # Ignore the default SQLite database.
 /chapter3/db/*.sqlite3
 /chapter3/db/*.sqlite3-journal
+/chapter4/db/*.sqlite3
+/chapter4/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /chapter3/log/*
 !/chapter3/log/.keep
 /chapter3/tmp
+/chapter4/log/*
+!/chapter4/log/.keep
+/chapter4/tmp

@@ -1,0 +1,34 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "browserify app/assets/javascripts/app.js -t babelify -o app/assets/javascripts/bundle.js -v",
+    "watch": "watchify app/assets/javascripts/app.js -t babelify -o app/assets/javascripts/bundle.js -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:wdpress/WDP92_NewComerTutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gihyo.jp/site/inquiry/book?ISBN=978-4-7741-8054-0"
+  },
+  "homepage": "https://github.com/wdpress/WDP92_NewComerTutorial",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "superagent": "^1.8.3"
+  },
+  "babel": {
+    "presets": ["es2015","react"]
+  }
+}
