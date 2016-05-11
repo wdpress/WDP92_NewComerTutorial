@@ -21,3 +21,7 @@
 /chapter4/log/*
 !/chapter4/log/.keep
 /chapter4/tmp
+
+chapter4/node_modules
+chapter4/vendor/bundle
+chapter4/app/assets/javascripts/bundle.js

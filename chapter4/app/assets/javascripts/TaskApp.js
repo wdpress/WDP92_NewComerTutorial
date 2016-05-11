@@ -42,11 +42,10 @@ export default class TaskApp extends React.Component {
   }
 
   taskDestroy(id) {
-    this.setState({
-      data: this.state.data.filter((task) => {
-        return task.id !== id;
-      })
-    });
+    var newTasks = this.state.data.filter((task) => {
+      return task.id !== id
+    })
+    this.setState({data: newTasks});
     request
       .del(this.props.url + '/' + id)
       .accept('application/json')
@@ -54,7 +53,7 @@ export default class TaskApp extends React.Component {
         if (err || !res.ok) {
           console.error(this.props.url, status, err.toString());
         } else {
-          this.setState({data: res.body});
+          this.setState({data: newTasks});
         }
       });
   }
@@ -67,8 +66,6 @@ export default class TaskApp extends React.Component {
       .end((err, res) => {
         if (err || !res.ok) {
           console.error(this.props.url, status, err.toString());
-        } else {
-          this.setState({data: res.body});
         }
       });
   }
